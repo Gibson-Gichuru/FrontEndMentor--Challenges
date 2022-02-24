@@ -1,0 +1,9 @@
+@import "base";
+
+// Import the break Point file after all the other styling files
+@import "breakPoints";
+@import "components/header";
+@import "components/product";
+@import "components/hero";
+@import "components/cta";
+@import "components/footer";

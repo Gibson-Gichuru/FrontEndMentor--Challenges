@@ -1,0 +1,35 @@
+.hero {
+
+    .flex {
+        flex-direction: column;
+    }
+    &__title {
+        font-size: 1.3rem;
+    }
+    &__text {
+        margin-bottom: $mb-1-5;
+    }
+
+    &__details {
+        max-width: 500px;
+    }
+
+
+    @media (min-width:37.5rem){
+        .flex {
+
+            flex-direction: row;
+            align-items: center;
+            column-gap: $mb-1-5
+        }
+
+        &__img , &__details{
+            width: 50%;
+        }
+
+        &__details {
+            text-align: left !important;
+        }
+
+    }
+}
