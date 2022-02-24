@@ -1,0 +1,29 @@
+@media (min-width:31.25rem){
+
+    body {
+        display: grid;
+        place-items:center;
+        background: url("/images/bg-desktop.svg") $violet;
+    }
+    .header {
+        .flex{
+            justify-content: flex-start;
+            row-gap: 3rem;
+        }
+        &__content {
+            text-align: left;
+
+        }
+            &__content.flex {
+                flex-direction: row;
+                align-items: center;
+                column-gap:1.5rem;
+            }
+
+
+            &__socials{
+                align-self: flex-end;
+            }
+        
+    }
+}

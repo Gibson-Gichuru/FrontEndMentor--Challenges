@@ -1,0 +1,42 @@
+.header {
+    .flex {
+        flex-direction: column;
+        row-gap: 3rem;
+
+    }
+
+    &__content {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        text-align: center;
+    }
+
+    .img--wrapper {
+        max-width: 41.5rem;
+    }
+    &__main--text {
+        max-width: 27.125rem;
+        margin: 0 auto;
+    }
+
+    &__title {
+        margin-bottom: 1.5rem;
+    }
+
+    &__text{
+        margin-bottom: 1.5rem;
+    }
+    &__socials {
+        font-size: 1.5rem;
+        align-self: center;
+
+        .bx {
+
+            color: #fcfcfc;
+            cursor: pointer;
+            transition: .4s ease-in-out;
+
+            &:hover, &:focus{color: $softMageta;}
+        }
+    }
+}

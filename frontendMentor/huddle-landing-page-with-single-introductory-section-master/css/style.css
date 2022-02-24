@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  background: url("/images/bg-mobile.svg"), #674baf;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 100vh;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  display: inline-block;
+}
+
+section {
+  padding: 1rem 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.btn {
+  padding: .6rem 3rem;
+  color: #674baf;
+  background-color: #fff;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
+
+.btn:hover, .btn:focus {
+  color: #fff;
+  background-color: #e882e8;
+}
+
+.header .flex {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 3rem;
+}
+
+.header__content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  text-align: center;
+}
+
+.header .img--wrapper {
+  max-width: 41.5rem;
+}
+
+.header__main--text {
+  max-width: 27.125rem;
+  margin: 0 auto;
+}
+
+.header__title {
+  margin-bottom: 1.5rem;
+}
+
+.header__text {
+  margin-bottom: 1.5rem;
+}
+
+.header__socials {
+  font-size: 1.5rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.header__socials .bx {
+  color: #fcfcfc;
+  cursor: pointer;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
+
+.header__socials .bx:hover, .header__socials .bx:focus {
+  color: #e882e8;
+}
+
+@media (min-width: 31.25rem) {
+  body {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    background: url("/images/bg-desktop.svg") #674baf;
+  }
+  .header .flex {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    row-gap: 3rem;
+  }
+  .header__content {
+    text-align: left;
+  }
+  .header__content.flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 1.5rem;
+            column-gap: 1.5rem;
+  }
+  .header__socials {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+}
+/*# sourceMappingURL=style.css.map */
