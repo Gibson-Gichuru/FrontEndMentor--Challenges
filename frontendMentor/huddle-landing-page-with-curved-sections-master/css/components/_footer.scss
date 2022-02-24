@@ -1,0 +1,106 @@
+.footer {
+    font-size: $smallerFontSize;
+    color: $paleBlue;
+    position: relative;
+    background-color: $veryDarkCyan;
+    .container {
+        flex-direction: column;
+
+        @media (min-width:37.5rem){
+            flex-direction:row;
+            column-gap: $mb-2;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        background-image: url("/images/bg-footer-top-mobile.svg");
+        background-size: 100% 20%;
+        background-repeat: no-repeat;
+        left: 0;
+        top: -20%;
+        width: 100%;
+        height: 100%;
+        z-index: -100;
+        @media (min-width:37.5rem){
+            background-image: url("/images/bg-footer-top-desktop.svg");
+        }
+
+        @media (min-width:){
+            top: -24%;
+        }
+
+    }
+
+    .newsletter {
+
+        max-width: 26.625rem;
+
+        &__title {
+            font-size: $mediumFontSize;
+        }
+        &__text {
+            margin-bottom: $mb-1;
+        }
+        &__form {
+            flex-wrap: wrap;
+            row-gap: $mb-1;
+    
+            .btn--capsule {
+               margin-left: auto;
+            }
+        }
+        &__input{
+            font-size: $normalFontSize;
+            font-family: $secFontFamily;
+            color: $veryDarkCyan;
+            text-align: center;
+            display: block;
+            width: 100%;
+            margin-left: auto;
+            padding: .6rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            background-color: $paleBlue;
+
+            &:focus {
+                outline: 2px solid $lightPink;
+            }
+        }
+    }
+
+    .contacts {
+
+        max-width: 26.625rem;
+        &__img {
+            margin-bottom: $mb-1;
+        }
+
+        .contact__text {
+            margin-bottom: $mb-1;
+        }
+        .contact__address {
+            align-items: center;
+            margin-bottom: $mb-1-5;
+            column-gap: $mb-1;
+
+            & i {
+                display: flex;
+                align-items: center;
+            }
+
+            & p {
+                font-style: normal;
+                font-family: $secFontFamily;
+            }
+        }
+
+        .contact__socials {
+            column-gap: $mb-1;
+        }
+    }
+    
+}

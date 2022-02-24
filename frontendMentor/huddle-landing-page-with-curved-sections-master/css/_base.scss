@@ -1,0 +1,154 @@
+// major styling resets responsive typography settings
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@700&display=swap');
+
+ // different break points
+ $mobleBreakPoint:23.4375rem;
+ $deskBreakPoint:90rem;
+
+ // colors
+
+ // Primary
+
+ $pink:hsl(322, 100%, 66%);
+ $lightPink:hsl(321, 100%, 78%);
+ $lightRed:hsl(0, 100%, 63%);
+
+ // Neutral
+ $veryDarkCyan:hsl(192, 100%, 9%);
+ $paleBlue:hsl(207, 100%, 98%);
+
+ // Typography
+
+ $primFontFamily:"Open Sans";
+ $secFontFamily:"Poppins";
+ $boldWeight:700;
+ $mediumWeight:600;
+ $lightWeight:400;
+
+ // Font Weights
+ $smallerFontSize:.75rem;
+ $normalFontSize:1rem;
+ $mediumFontSize:1.6rem;
+ $largeFontSize:2rem;
+ 
+
+ $normalLineHight:1.5;
+
+ $popUpZindex:10;
+ $headerZindex:100;
+
+//  margin bottoms
+
+$mb-1:1rem;
+$mb-1-5:1.5rem;
+$mb-2:2rem;
+$mb-2-5:2.5rem;
+// css resets 
+
+*,*::after,*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family:$primFontFamily;
+    font-size:$normalFontSize;
+    line-height: $normalLineHight;
+    color: $veryDarkCyan;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style: none;
+}
+
+h1, h2,h3 {
+    line-height: 1;
+}
+
+.bx {
+    color: $paleBlue;
+    font-size: $mediumFontSize;
+    transition: .4s ease-in-out;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        color: $lightRed;
+    }
+}
+// reusable styles
+section {
+    padding: 2rem 0;
+}
+.container {
+    width: 90%;
+    max-width: $deskBreakPoint;
+    margin: 0 auto;
+}
+
+.inner--container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.title {
+    font-size: $mediumFontSize;
+    font-family: $secFontFamily;
+    font-weight: $boldWeight;
+    margin-bottom: $mb-1-5;
+    text-transform: capitalize;
+}
+
+.btn, .btn--capsule, .btn--link {
+    font-family: $secFontFamily;
+    display: inline-block;
+    border: none;
+    border-radius: 100px;
+    padding: .6rem 1rem;
+    color: $paleBlue;
+    background-color: $pink;
+    transition: .4s ease-in-out;
+
+    &:hover,
+    &:focus {
+        background-color: $lightPink;
+    }
+
+}
+
+.btn--link {
+    border: $pink solid 1.5px;
+    border-radius: 50px;
+    padding: .1rem .7rem;
+    background-color: #FFF;
+    color: $pink;
+    &:hover,
+    &:focus {
+        background-color: $lightPink;
+        color: $paleBlue;
+    }
+
+}
+
+.btn--capsule {
+    padding: .4rem 1rem;
+    border-radius: 10px;
+}

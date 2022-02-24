@@ -1,0 +1,10 @@
+.navigation {
+    min-height: 3rem;
+    align-items: center;
+    justify-content: space-between;
+    &__logo {
+        width: 6rem;
+        line-height: 1;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,21 @@
+.hero {
+    
+    &__text, &__img {
+        
+        text-align: center;
+
+    }
+    &__title {
+        font-size: $mediumFontSize;
+        line-height: $normalLineHight;
+    }
+    &__details {
+        max-width: 25rem;
+        margin: 0 auto;
+        margin-bottom: $mb-1-5;
+    }
+    &__btn {
+        margin-bottom: $mb-1-5;
+    }
+    
+}
