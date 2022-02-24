@@ -1,0 +1,38 @@
+.footer{
+
+    background-color: $veryDarkBlue;
+    color: $lightGrayishBlue;
+    padding: 3rem 0;
+    .flex {
+        flex-direction: column;
+        row-gap: $mb-1-5;
+    }
+
+    &__img {
+        max-width: 150px;
+        margin-bottom: $mb-1;
+    }
+
+    &__socials{
+        font-size: $normalFS;
+        flex-direction: row !important;
+        justify-content: center;
+        align-items: center;
+        column-gap: $mb-1;
+        transition: color .4s ease-in-out;
+
+        & .bx:hover,
+        & .bx:focus {
+            
+            color: $modarateCyan;
+        }
+    }
+
+    @media (min-width:37.5rem){
+        .flex{
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+.navigation {
+    &__nav {
+        & a {
+            display: flex;
+            align-items: center;
+        }
+        min-height: 10vh;
+        align-items: center;
+    }
+
+    &__item + &__item {
+        margin-left: $mb-1;
+    }
+    &__img {
+        max-width: 5rem;
+    }
+}

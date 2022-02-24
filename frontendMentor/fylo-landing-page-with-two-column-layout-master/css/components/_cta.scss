@@ -1,0 +1,43 @@
+.cta {
+    background-color: $desaturatedBlue;
+    color: $lightGrayishBlue;
+    text-align: center;
+    padding: $mb-2 $mb-1-5; 
+
+
+    &__details, &__form{
+        max-width: 400px;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    &__header {
+        color: $lightGrayishBlue;
+    }
+
+    &__text {
+        font-size: $smallerFS;
+        margin-bottom: $mb-1;
+    }
+
+    .btn {
+        background-color: $brightBlue;
+    }
+
+    @media (min-width:37.5rem) {
+
+        padding: 7rem 0;
+        .flex {
+            flex-direction: row;
+            justify-content: space-around;
+            column-gap: $mb-1-5;
+        }
+        &__details, &__form{
+            width: 50%;
+        }
+
+        
+    }
+}
