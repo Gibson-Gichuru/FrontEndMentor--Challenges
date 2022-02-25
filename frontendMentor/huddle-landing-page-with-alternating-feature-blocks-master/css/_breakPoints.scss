@@ -1,0 +1,46 @@
+@media (min-width:38.25rem){
+    .header {
+        .hero {
+            .container {
+                flex-direction: row;
+                align-items: center ;
+            }
+            &__text--content {
+                text-align: left;
+            }
+        }
+    }
+
+    .about {
+    
+        &__card {
+            flex-direction: row;
+            align-items: center;
+           
+        }
+
+        
+    
+    
+    }
+
+    .footer{
+        &__content {
+            max-width:16.875rem;
+        }
+    }
+    
+}
+
+@media (min-width:46rem){
+    .footer {
+        
+        .container {
+            flex-direction: row;
+            column-gap: 1rem;
+        }
+
+        
+
+    }
+}

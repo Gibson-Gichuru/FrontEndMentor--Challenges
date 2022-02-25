@@ -1,0 +1,44 @@
+.header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background:url("/images/bg-hero-mobile.svg") $pale-cyan;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    .nav {
+        padding: 1rem 0;
+        &-bar {
+            align-items: center;
+        }
+        &-bar__img{
+            max-width: 6.5rem;
+            
+        }
+    }
+
+    .hero {
+        margin: auto 0;
+
+        .container {
+            flex-direction: column;
+        }
+        &__text--content {
+            text-align: center;
+            max-width: 24.19rem;
+            margin: 0 auto;
+            margin-bottom: 1.3rem;
+        }
+        &__title {
+            font-size: $bigger-fs;
+        }
+        &__text {
+            margin-bottom: 1.3rem;
+        }
+
+        &__img--wrapper {
+            max-width: 31.2rem;
+            margin: 0 auto;
+        }
+    }
+}
