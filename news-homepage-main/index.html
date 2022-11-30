@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | News homepage</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <nav>
+      <div class="nav--container">
+        <img class="logo" src="./assets/images/logo.svg" alt="site logo">
+        <div class="navbar">
+          <div class="navbar--overlay" id="overlay">
+            <ul class="navbar--list">
+              <li class="navbar--link">Home</li>
+              <li class="navbar--link">New</li>
+              <li class="navbar--link">Popular</li>
+              <li class="navbar--link">Trending</li>
+              <li class="navbar--link">Categories</li>
+            </ul>
+            <button class="btn nav--btn close-btn " id="close-btn">
+              <img src="./assets/images/icon-menu-close.svg" alt="">
+            </button>
+          </div>
+        </div>
+
+        <button class="btn nav--btn open-btn" id="open-btn">
+          <img src="./assets/images/icon-menu.svg" alt="">
+        </button>
+
+      </div>
+    </nav>
+    <div class="wrapper">
+
+      <header class="header">
+        <img class="desktop-img header--img" src="./assets/images/image-web-3-desktop.jpg" alt="">
+        <img class="mobile-img header--img" src="./assets/images/image-web-3-mobile.jpg" alt="">
+        <h1 class="title header--title">
+          The Bright Future of Web 3.0?
+        </h1>
+        <div class="header--content">
+          <p class="header--text">
+            We dive into the next evolution of the web that claims to put the power of the platforms back into the hands
+            of the
+            people.
+            But is it really fulfilling its promise?
+          </p>
+          <button class="btn header--btn">Read more</button>
+        </div>
+      </header>
+      <section class="cta">
+        <h2 class="title cta--title">New</h2>
+        <div class="cta--content">
+          <article class="cta--article">
+            <h3 class="title cta-article--title">Hydrogen VS Electric Cars</h3>
+            <p class="article--text">
+              Will hydrogen-fueled cars ever catch up to EVs?
+            </p>
+          </article>
+          <article class="cta--article">
+            <h3 class="title cta-article--title">
+              The Downsides of AI Artistry
+            </h3>
+            <p class="article--text">
+              What are the possible adverse effects of on-demand AI image generation?
+            </p>
+          </article>
+          <article class="cta--article">
+            <h3 class="title cta-article--title">
+              Is VC Funding Drying Up?
+            </h3>
+            <p class="article--text">
+              Private funding by VC firms is down 50% YOY. We take a look at what that means.
+            </p>
+          </article>
+
+        </div>
+      </section>
+      <section class="articles">
+        <article class="article--item">
+          <img class="article--item-img" src="./assets/images/image-retro-pcs.jpg" alt="">
+          <div class="article--content">
+            <span class="article--count">01</span>
+            <h3 class="title article--title">Reviving Retro PCs</h3>
+            <p class="article--text">
+              What happens when old PCs are given modern upgrades?
+            </p>
+          </div>
+        </article>
+        <article class="article--item">
+          <img class="article--item-img" src="./assets/images/image-top-laptops.jpg" alt="">
+          <div class="article--content">
+            <span class="article--count">02</span>
+            <h3 class="title article--title">
+              Top 10 Laptops of 2022
+            </h3>
+            <p class="article--text">
+              Our best picks for various needs and budgets.
+            </p>
+          </div>
+        </article>
+        <article class="article--item">
+          <img class="article--item-img" src="./assets/images/image-gaming-growth.jpg" alt="">
+          <div class="article--content">
+            <span class="article--count">03</span>
+            <h3 class="title article--title">The Growth of Gaming</h3>
+            <p class="article--text">
+              How the pandemic has sparked fresh opportunities.
+            </p>
+          </div>
+        </article>
+      </section>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Gibson Gichuru</a>.
+  </div>
+</body>
+
+<script>
+  const openBtn = document.getElementById("open-btn")
+  const overlay = document.getElementById("overlay")
+  const closeBtn = document.getElementById("close-btn")
+  openBtn.addEventListener("click", ()=>{
+    overlay.classList.add("opened");
+  })
+
+  closeBtn.addEventListener("click", ()=>{
+    overlay.classList.remove("opened");
+  })
+</script>
+
+</html>
