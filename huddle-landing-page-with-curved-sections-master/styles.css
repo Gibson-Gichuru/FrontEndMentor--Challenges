@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap');
+
+*,*::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: hsl(192, 100%, 9%);
+}
+
+.container{
+    width: 80%;
+    max-width: 90rem;
+    margin: auto;
+}
+section{
+    margin: 2rem 0;
+}
+img{
+    width: 100%;
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.title{
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    margin: 1rem 0;
+}
+
+.btn{
+    display: inline-block;
+    margin: 1rem 0;
+    border: none;
+    background-color: hsl(322, 100%, 66%);
+    color: hsl(192, 100%, 100%);
+    text-transform: capitalize;
+    letter-spacing: 1.2px;
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+}
+
+.btn--clear{
+    border: 1px solid hsl(322, 100%, 66%);
+    background-color: transparent;
+    color: hsl(322, 100%, 66%);
+    padding: 0.2rem 0.6rem;
+}
+.btn--box{
+    border-radius: 10px;
+}
+
+.center--text{
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+.logo{
+    width: 5rem;
+}
+
+.header--text{
+    line-height: 1.5;
+    margin: 1rem 0;
+}
+
+.header--stats{
+    text-align: left;
+    margin-top: 2rem;
+}
+.numbers{
+    font-size: 2rem;
+    position: relative;
+}
+
+.communities .numbers::before, .messages .numbers::before {
+    position: absolute;
+    top: -75%;
+    left: 0;
+    z-index: 2;
+}
+
+.communities .numbers::before{
+    content: url("/images/icon-communities.svg");
+}
+
+.messages .numbers::before{
+    content: url("/images/icon-messages.svg");
+}
+
+
+.stats--text{
+    font-size: 0.6rem;
+}
+
+.about--content{
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+footer{
+    position: relative;
+    margin-top: 3rem;
+    padding: 1rem 0;
+    background-color: hsl(192, 100%, 9%);
+    color: hsl(192, 100%, 100%);
+}
+.desktop--img{
+    display: none;
+}
+
+.mobile--img{
+    position: absolute;
+    top: -16.5%;
+    left: 0;
+
+}
+
+.footer--content{
+    flex-direction: column;
+}
+.socials--icon{
+    width: 15px;
+    color: hsl(192, 100%, 100%);
+}
