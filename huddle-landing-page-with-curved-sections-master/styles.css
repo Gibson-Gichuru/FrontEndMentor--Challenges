@@ -52,7 +52,7 @@ a{
     padding: 0.2rem 0.6rem;
 }
 .btn--box{
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .center--text{
@@ -67,10 +67,15 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 3rem;
 }
 .logo{
     width: 5rem;
+}
+
+.header{
+    max-width: 33rem;
+    margin: auto;
 }
 
 .header--text{
@@ -116,7 +121,7 @@ a{
 footer{
     position: relative;
     margin-top: 3rem;
-    padding: 1rem 0;
+    padding: 3rem 0;
     background-color: hsl(192, 100%, 9%);
     color: hsl(192, 100%, 100%);
 }
@@ -126,7 +131,7 @@ footer{
 
 .mobile--img{
     position: absolute;
-    top: -16.5%;
+    top: -10.5%;
     left: 0;
 
 }
@@ -134,7 +139,100 @@ footer{
 .footer--content{
     flex-direction: column;
 }
+
+.socials{
+    display: inline-flex;
+    gap: 1rem;
+}
 .socials--icon{
     width: 15px;
     color: hsl(192, 100%, 100%);
+    fill: hsl(192, 100%, 100%);
+}
+
+.contact--wrapper{
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.contacts--mobile{
+    margin-bottom: 1rem;
+}
+.newsletter{
+    order: 0;
+}
+
+.footer--form{
+    margin: 1rem 0;
+    flex-direction: column;
+}
+
+.footer--input{
+    padding: 0.5em 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer--btn{
+    width: 100px;
+    align-self: flex-end;
+}
+
+.footer--logo{
+    width: 150px;
+}
+
+/*  */
+
+@media screen and (min-width:39rem) {
+    
+    .about--content{
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        gap: 1rem;
+    }
+
+    .about--content:nth-child(2) img{
+        order: 1;
+    }
+
+    .about--content:nth-child(2) .about--text{
+        order: 0;
+    }
+
+    .footer--content{
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .footer--form{
+        margin: 0 ;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .contact--wrapper{
+        order: 0;
+    }
+
+    .newsletter{
+        order: 1;
+    }
+
+    .desktop--img{
+        display: none;
+        position: absolute;
+        top: -10.5%;
+        left: 0;
+    }
+    
+    .mobile--img{
+        display: none;
+        
+    
+    }
 }
