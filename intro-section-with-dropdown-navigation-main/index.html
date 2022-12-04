@@ -1,39 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <nav class="nav">
+    <div class="nav--logo">
+      <img class="logo" src="./images/logo.svg" alt="snap">
+    </div>
+    <div class="overlay"></div>
+    <div class="nav--bar">
+      <ul class="nav--links">
+        <li class="nav--link dropdown">
+          <a class="dropdown--link" href="#" id="features">
+            Features
+            <img class="icon arrow--up " src="./images/icon-arrow-up.svg" alt="open dropdown">
+            <img class="icon arrow--down hide--arrow" src="./images/icon-arrow-down.svg" alt="close dropdown">
+          </a>
+          <ul class="popup hide--popup" id="featuresPop">
+            <li class="popup--item">
+              <img class="icon" src="./images/icon-todo.svg" alt="todo list">
+              <span>Todo List</span>
+            </li>
+            <li class="popup--item">
+              <img class="icon" src="./images/icon-calendar.svg" alt="calender">
+              <span>Calender</span>
+            </li>
+            <li class="popup--item">
+              <img class="icon" src="./images/icon-reminders.svg" alt="reminder">
+              <span>Reminders</span>
+            </li>
+            <li class="popup--item">
+              <img class="icon" src="./images/icon-planning.svg" alt="planning">
+              <span>Planning</span>
+            </li>
+          </ul>
+        </li>
+        <li class="nav--link dropdown">
+          <a class="dropdown--link" href=#" id="company">
+            Company
+            <img class="icon arrow--up" src="./images/icon-arrow-up.svg" alt="open dropdown">
+            <img class="icon arrow--down hide--arrow" src="./images/icon-arrow-down.svg" alt="close dropdown">
+          </a>
+          <ul class="popup hide--popup" id="companyPop">
+            <li class="popup--item">
+              <a href="#">History</a>
+            </li>
+            <li class="popup--item">
+              <a href="#">Our Team</a>
+            </li>
+            <li class="popup--item">
+              <a href="#">Blog</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav--link">
+          <a href="#">Careers</a>
+        </li>
+        <li class="nav--link">
+          <a href="#">About</a>
+        </li>
+      </ul>
 
-  Features
-  Company
-  Careers
-  About
+      <ul class="nav--links cta">
+        <li class="nav--link">
+          <a href="#">Login</a>
+        </li>
+        <li class="nav--link cta--btn">
+          <a href="#">Register</a>
+        </li>
+      </ul>
 
-  Login
-  Register
+      <button class="nav--close btn" id="closeMenu">
+        <img src="./images/icon-close-menu.svg" alt="closr nav menu">
+      </button>
+    </div>
 
-  Make remote work
+    <button class="nav--open btn" id="openMenu">
+      <img src="./images/icon-menu.svg" alt="open nav menu">
+    </button>
+  </nav>
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="container">
+    <main class="hero">
+      <div class="hero--content">
+        <h1 class="title hero--header">
+          Make remote work
+        </h1>
+        <p class="hero--text">
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <button class="btn hero--btn">Learn more</button>
+      </div>
+      <div class="clients">
+        <img src="./images/client-databiz.svg" alt="databiz" class="client--img">
+        <img src="./images/client-audiophile.svg" alt="audio phile" class="client--img">
+        <img src="./images/client-meet.svg" alt="meet" class="client--img">
+        <img src="./images/client-maker.svg" alt="maker" class="client--img">
+      </div>
+      <div class="hero--img">
+        <img class="mobile--img" src="./images/image-hero-mobile.png" alt="">
+        <img class="desktop--img" src="./images/image-hero-mobile.png" alt="">
+      </div>
+    </main>
   </div>
 </body>
+<script src="./app.js"></script>
 </html>
