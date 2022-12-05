@@ -51,7 +51,7 @@ features.addEventListener("click", ()=>{
 company.addEventListener("click", ()=>{
     companyPop.classList.toggle("hide--popup")
 
-    if(featuresPop.classList.contains("hide--popup")){
+    if(companyPop.classList.contains("hide--popup")){
 
         document.querySelector("#company .arrow--up")
         .classList.add("hide--arrow")
@@ -67,4 +67,3 @@ company.addEventListener("click", ()=>{
         .classList.add("hide--arrow")
     }
 })
-
