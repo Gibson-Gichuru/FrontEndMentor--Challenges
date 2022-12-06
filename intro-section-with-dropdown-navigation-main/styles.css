@@ -267,10 +267,10 @@ ul{
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        max-width: 450px;
+        max-width: 650px;
     }
     .hero--header{
-        font-size: 3.5rem;
+        font-size: 4.5rem;
     }
 
     .hero--img{
