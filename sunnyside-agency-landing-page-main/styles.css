@@ -148,6 +148,7 @@ body {
 }
 .nav--link{
     cursor: pointer;
+    transition: all 450ms ease-in;
 }
 .nav--link:hover {
     color: var(--desaturated-blue);
@@ -289,7 +290,11 @@ footer {
     text-align: center;
     padding: 5rem 1rem;
 }
-
+.footer--logo{
+    width: 250px;
+    margin-bottom: 1rem;
+    fill: var(--dark-grayish-blue);
+}
 .footer--nav {
     display: flex;
     justify-content: center;
@@ -301,6 +306,10 @@ footer {
     gap: 2rem;
     margin: 2rem 0;
     justify-content: center;
+}
+
+.footer--link:hover{
+    color: var(--white);
 }
 
 .social--icon {
