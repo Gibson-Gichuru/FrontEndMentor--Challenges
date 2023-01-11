@@ -1,0 +1,18 @@
+:root{
+    --white:hsl(0, 0%, 100%);
+    --black:hsl(0, 0%, 0%);
+    --dark-gray:hsl(0, 0%, 55%);
+    --very-dark-gray:hsl(0, 0%, 41%);
+    --md:375px;
+    --lg:1440px;
+}
+
+/* basic styles reset */
+*,*::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    /* debug */
+    background-color: rgba(255, 0, 255, 0.3);
+}
