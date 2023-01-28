@@ -1,0 +1,91 @@
+:root{
+    --input-font:24px;
+    --lg:1440px;
+    --strong-cyan:hsl(172, 67%, 45%);
+    --very-dark-cyan:hsl(183, 100%, 15%);
+    --dark-gray--cyan:hsl(186, 14%, 43%);
+    --light-gray-cyan:hsl(185, 41%, 84%);
+    --very-light-gray-cyan:hsl(189, 41%, 97%);
+    --white:hsl(0, 0%, 100%);
+}
+
+*,*::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--light-gray-cyan);
+}
+
+.calculator{
+    background-color: var(--white);
+    color: var(--dark-gray--cyan);
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+.form--element{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+label{
+    font-size: 1rem;
+}
+
+input[type="text"]{
+    border: none;
+    padding: 0.5rem;
+    background-color: var(--very-light-gray-cyan);
+    color: var(--very-dark-cyan);
+}
+
+input[type="button"]{
+    padding:0.6rem 2rem;
+    background-color: var(--very-dark-cyan);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.tip--btn-group{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 140px);
+    gap: 15px;
+    /* justify-content: center; */
+}
+
+.output--area{
+    background-color: var(--very-dark-cyan);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.total--display{
+    display: flex;
+    align-items: center;
+}
+
+.reset--btn{
+    padding: 0.5rem 2rem;
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+}

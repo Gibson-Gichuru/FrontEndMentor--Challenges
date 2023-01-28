@@ -1,51 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | Interactive card details form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
+  <main class="main--content">
+    <div class="card">
+      <div class="card--img">
+        <picture>
+          <source media="(min-width:350px)" srcset="./images/bg-main-desktop.png">
+          <img src="./images/bg-main-mobile.png" alt="">
+        </picture>
+        <div class="card--wrapper">
+          <div class="credit--card back">
+            <img src="./images/bg-card-back.png" alt="card front face">
+          </div>
+          <div class="credit--card front">
+            <img src="./images/bg-card-front.png" alt="card back face">
+            <div class="card--details">
+              <img class="avator" src="./images/card-logo.svg" alt="">
+              <p class="card--number">0000 0000 0000 0000</p>
+              <div class="customer--details">
+                <p>JANE APPLESEED</p>
+                <p>00/00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card--form">
+        <form action="#" class="form">
+          <div class="card--form-element">
+            <label for="name">Cardholder Name</label>
+            <input id="name" name="name" type="text" class="form--input" placeholder="e.g. Jane Appleseed">
+            <span class="form--error" id="nameError"></span>
+          </div>
+          <div class="card--form-element">
+            <label for="cardNumber">Card Number</label>
+            <input id="cardNumber" name="cardNumber" type="text" class="form--input"
+              placeholder="e.g. 1234 5678 9123 0000">
+            <span class="form--error" id="cardNumber--error">Wrong format, numbers only</span>
+          </div>
+          <div class="element--wrapper">
+            <div class="labels">
+              <label for="month">Exp. Date (MM/YY)</label>
+              <label for="cvc">CVC</label>
+            </div>
+            <div class="inputs">
+              <input id="month" name="month" type="text" class="form--input" placeholder="MM">
+              <input id="year" name="year" type="text" class="form--input" placeholder="YY">
+              <input id="cvc" name="cvc" type="text" class="form--input" placeholder="e.g 123">
+            </div>
+            <span class="form--error" id="date--error">Can't be blank</span>
+          </div>
+          <button class="btn btn--fill" type="submit">Confirm</button>
+        </form>
+      </div>
+      <div class="complete--state hide--complete">
+        <img class="state--img" src="./images/icon-complete.svg" alt="complete">
+        <h1 class="title">Thank you!</h1>
+        <p class="complete--state-text">We've added your card details</p>
+        <button class="btn btn--fill">Continue</button>
+      </div>
+    </div>
+  </main>
+  <script src="./app.js"></script>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+
 </html>

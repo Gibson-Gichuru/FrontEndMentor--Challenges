@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&family=Space+Grotesk:wght@500&display=swap');
+
+:root{
+    --very-dark-blue:hsl(212, 21%, 14%);
+    --dark-grayish-blue:hsl(228, 12%, 48%);
+    --dark-cyan:hsl(158, 36%, 37%);
+    --cream:hsl(30, 38%, 92%);
+    --white:hsl(0, 0%, 100%);
+
+    /* Typography */
+    --font-size:14px;
+    --header-ff:'Fraunces', serif;
+    --main-ff:'Montserrat', sans-serif;
+}
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+body{
+    font-size: var(--font-size);
+    font-family: var(--main-ff);
+    color: var(--dark-grayish-blue);
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+    background-color: var(--cream);
+}
+
+.accent {
+    color: var(--dark-cyan);
+}
+
+.title {
+    font-family: var(--header-ff);
+    font-size: 2rem;
+}
+.card{
+    width: 90%;
+    max-width: 600px;
+    background-color: var(--white);
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card--content{
+    padding: 2rem;
+    max-width: 38ch;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.header{
+    line-height: 1;
+    color: var(--very-dark-blue);
+}
+
+.sub--header{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--dark-grayish-blue);
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.card--text{
+    line-height: 2;
+}
+.card--prices{
+    display: flex;
+    gap: 1rem;
+}
+.prev-price{
+    text-decoration: line-through;
+    align-self: center;
+}
+
+.card--btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    border: 0;
+    border-radius: 10px;
+    padding: 1rem 0.5rem;
+
+    transition: all 400ms ease-in;
+}
+
+.card--btn:hover{
+    cursor: pointer;
+    background-color: var(--very-dark-blue);
+}
+@media screen and (min-width:570px) {
+    .card{
+        flex-direction: row;
+        max-height: 400px;
+    }
+
+    .card--content{
+        max-width: 32ch;
+        padding: 1.5rem 2rem;
+    }
+}
