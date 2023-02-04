@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+</head>
+
+<body>
+  <div class="card">
+    <img class="logo" src="./images/logo.svg" alt="logo">
+    <picture class="card--picture">
+      <source media="(min-width:600px)" srcset="./images/hero-desktop.jpg">
+      <img src="./images/hero-mobile.jpg">
+    </picture>
+    <div class="card--content">
+      <div class="wrapper">
+
+        <img class="dst-logo" src="./images/logo.svg" alt="">
+
+        <div class="card--text">
+          <h1 class="card--title title"><span class="accent">We're</span> coming soon</h1>
+          <p class="text">
+            Hello fellow shoppers! We're currently building our new fashion store.
+            Add your email below to stay up-to-date with announcements and our launch deals.
+          </p>
+
+        </div>
+        <div class="form--input">
+          <div class="email--input">
+            <input type="text" placeholder="Email Address">
+          </div>
+          <span class="error--message">Please provide a valid email</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const input = document.querySelector(".email--input");
+
+    const error = document.querySelector(".error--message");
+
+    let btn_after = window.getComputedStyle(input, "::after");
+
+    let btn_before = window.getComputedStyle(input, "::before");
+
+    let emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+
+    input.addEventListener("keypress", (event) => {
+
+      if (!event.target.value.match(emailRegex)) {
+
+        // Show the error message
+        error.style.opacity = "1"
+
+        // show th error icon
+        input.style.setProperty("--opacity", "1");
+        // move the button
+
+        if (window.innerWidth >= 600) {
+
+          input.style.setProperty("--right", "-20px");
+        }
+        input.style.setProperty("--button-opacity", "0");
+
+        // // give the button a shadow
+
+        // input.style.setProperty(
+        //   "--shadow",
+        //   "135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%)"
+        // )
+      }
+      else {
+        error.style.opacity = "0"
+        // show th error icon
+        input.style.setProperty("--opacity", "0");
+        // move the button
+
+        if (window.innerWidth >= 600) {
+
+          input.style.setProperty("--right", "0");
+    
+        }
+        input.style.setProperty("--button-opacity", "1");
+
+
+        // remove button shadow
+
+        input.style.setProperty("--shadow", "")
+      }
+    })
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+    --dark-grayish: hsl(0, 6%, 24%);
+    --soft-red: hsl(0, 93%, 68%);
+    --dedaturated-red: hsl(0, 36%, 70%);
+    --font-family: 'Josefin Sans', sans-serif;
+    --linear-1: 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%);
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+body {
+    font-size: 16px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    color: var(--dedaturated-red);
+}
+
+.accent {
+    color: var(--dedaturated-red);
+    font-weight: 300;
+}
+
+.title {
+    color: var(--dark-grayish);
+    font-weight: 600;
+}
+
+.error--message {
+    color: var(--soft-red);
+    font-size: 0.7rem;
+    opacity: 0;
+    transition: all 400ms ease;
+}
+
+.dst-logo {
+    display: None;
+}
+
+.logo {
+    width: 130px;
+    padding: 1.5rem;
+}
+
+.card--content {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.card--title {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    max-width: 10ch;
+    margin: auto;
+}
+
+.text {
+    font-size: 0.8rem;
+    max-width: 34ch;
+    margin: 1.5rem auto;
+}
+
+.form--input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.email--input {
+    border: 1px solid var(--dedaturated-red);
+    border-radius: 100px;
+    padding: 0.6rem 1.5rem;
+    position: relative;
+}
+
+.email--input::before {
+    content: url("./images/icon-error.svg");
+    position: absolute;
+    width: 50px;
+    top: 58%;
+    right: 10%;
+    z-index: 5;
+    transform: translateY(-51%);
+    opacity: var(--opacity, 0);
+}
+
+.email--input::after {
+    content: url("./images/icon-arrow.svg");
+    position: absolute;
+    width: 60px;
+    height: 100%;
+    right: var(--right, 0);
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(var(--linear-1));
+    z-index: 5;
+    border-radius: 100px;
+    opacity: var(--button-opacity, 1);
+    /* background: linear-gradient(var(
+        --shadow
+    )); */
+    transition: all 400ms ease-in;
+}
+
+input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--dedaturated-red);
+}
+
+@media screen and (min-width:600px) {
+    .logo {
+        display: none;
+    }
+
+    .dst-logo {
+        display: block;
+        width: 150px;
+    }
+
+    .card{
+        display: flex;
+        height: 100vh;
+    }
+    .card--picture{
+        order: 2;
+        display: flex;
+    }
+    .card--content {
+        padding: 6rem ;
+        width: 60%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card--title,
+    .text {
+        margin: unset;
+    }
+
+    .card--title{
+        margin-top: 5rem;
+    }
+    .text {
+        max-width: 46ch;
+        margin: 2rem 0;
+        line-height: 1.5;
+    }
+
+    .form--input {
+        align-items: flex-start;
+    }
+}

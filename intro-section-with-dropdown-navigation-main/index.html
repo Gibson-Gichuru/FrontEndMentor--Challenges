@@ -7,112 +7,109 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/styles.css">
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 </head>
 
 <body>
-  <nav class="nav">
-    <div class="nav--logo">
+  <header>
+    <nav class="nav">
       <img class="logo" src="./images/logo.svg" alt="snap">
-    </div>
-    <div class="overlay"></div>
-    <div class="nav--bar">
-      <ul class="nav--links primary--nav">
-        <li class="nav--link dropdown">
-          <a class="dropdown--link" href="#" id="features">
-            Features
-            <img class="icon arrow--up " src="./images/icon-arrow-up.svg" alt="open dropdown">
-            <img class="icon arrow--down hide--arrow" src="./images/icon-arrow-down.svg" alt="close dropdown">
-          </a>
-          <ul class="popup hide--popup" id="featuresPop">
-            <li class="popup--item">
-              <img class="icon" src="./images/icon-todo.svg" alt="todo list">
-              <span>Todo List</span>
-            </li>
-            <li class="popup--item">
-              <img class="icon" src="./images/icon-calendar.svg" alt="calender">
-              <span>Calender</span>
-            </li>
-            <li class="popup--item">
-              <img class="icon" src="./images/icon-reminders.svg" alt="reminder">
-              <span>Reminders</span>
-            </li>
-            <li class="popup--item">
-              <img class="icon" src="./images/icon-planning.svg" alt="planning">
-              <span>Planning</span>
-            </li>
-          </ul>
-        </li>
-        <li class="nav--link dropdown">
-          <a class="dropdown--link" href=#" id="company">
-            Company
-            <img class="icon arrow--up" src="./images/icon-arrow-up.svg" alt="open dropdown">
-            <img class="icon arrow--down hide--arrow" src="./images/icon-arrow-down.svg" alt="close dropdown">
-          </a>
-          <ul class="companypop popup hide--popup" id="companyPop">
-            <li class="popup--item">
-              <a href="#">History</a>
-            </li>
-            <li class="popup--item">
-              <a href="#">Our Team</a>
-            </li>
-            <li class="popup--item">
-              <a href="#">Blog</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav--link">
-          <a href="#">Careers</a>
-        </li>
-        <li class="nav--link">
-          <a href="#">About</a>
-        </li>
-      </ul>
-
-      <ul class="nav--links secondary--nav cta">
-        <li class="nav--link">
-          <a href="#">Login</a>
-        </li>
-        <li class="nav--link cta--btn">
-          <a href="#">Register</a>
-        </li>
-      </ul>
-
-      <button class="nav--close btn" id="closeMenu">
-        <img src="./images/icon-close-menu.svg" alt="closr nav menu">
+      <div class="cover"></div>
+      <div class="nav--wrapper">
+        <ul class="nav--links main--nav">
+          <li class="nav--link dropdown" id="dropDown">
+            <div class="link--content">
+              <a href="#">Features</a>
+              <img class="arrow--down" src="./images/icon-arrow-down.svg" alt="arrow down">
+              <img class="arrow--up" src="./images/icon-arrow-up.svg" alt="arrow up">
+            </div>
+            <ul class="dropdown--links">
+              <li class="dropdown--link">
+                <img src="./images/icon-todo.svg" alt="todo">
+                <span class="dropdown--link-name">Todo List</span>
+              </li>
+              <li class="dropdown--link">
+                <img src="./images/icon-calendar.svg" alt="calender">
+                <span class="dropdown--link-name">Calender</span>
+              </li>
+              <li class="dropdown--link">
+                <img src="./images/icon-reminders.svg" alt="reminders">
+                <span class="dropdown--link-name">Reminders</span>
+              </li>
+              <li class="dropdown--link">
+                <img src="./images/icon-planning.svg" alt="planning">
+                <span class="dropdown--link-name">Planning</span>
+              </li>
+            </ul>
+          </li>
+          <li class="nav--link dropdown" id="dropDown">
+            <div class="link--content">
+              <a href="#">Company</a>
+              <img class="arrow--down" src="./images/icon-arrow-down.svg" alt="arrow down">
+              <img class="arrow--up" src="./images/icon-arrow-up.svg" alt="arrow up">
+            </div>
+            <ul class="dropdown--links">
+              <li class="dropdown--link">History</li>
+              <li class="dropdown--link">Our Team</li>
+              <li class="dropdown--link">Blog</li>
+            </ul>
+          </li>
+          <li class="nav--link">
+            <a href="#">Careers</a>
+          </li>
+          <li class="nav--link">
+            <a href="">About</a>
+          </li>
+        </ul>
+        <ul class="nav--links sec--nav">
+          <li class="nav--link">
+            <a href="#">Login</a>
+          </li>
+          <li class="nav--link link-cta">
+            <a href="#">Register</a>
+          </li>
+        </ul>
+        <button class="nav--btn close--btn" id="closeBtn">
+          <img src="./images/icon-close-menu.svg" alt="close menu">
+        </button>
+      </div>
+      <button class="nav--btn open--btn" id="openBtn">
+        <img src="./images/icon-menu.svg" alt="open menu">
       </button>
-    </div>
-
-    <button class="nav--open btn" id="openMenu">
-      <img src="./images/icon-menu.svg" alt="open nav menu">
-    </button>
-  </nav>
-
-  <div class="container">
-    <main class="hero">
-      <div class="hero--content">
-        <h1 class="title hero--header">
-          Make <br class="break">remote work
-        </h1>
-        <p class="hero--text">
+    </nav>
+  </header>
+  <main class="main container">
+    <div class="main--content">
+      <div class="main--content-text">
+        <h1 class="main--header title">Make <br> remote work</h1>
+        <p class="main--text">
           Get your team in sync, no matter your location. Streamline processes,
           create team rituals, and watch productivity soar.
         </p>
-        <button class="btn hero--btn">Learn more</button>
-        <div class="clients">
-          <img src="./images/client-databiz.svg" alt="databiz" class="client--img">
-          <img src="./images/client-audiophile.svg" alt="audio phile" class="client--img">
-          <img src="./images/client-meet.svg" alt="meet" class="client--img">
-          <img src="./images/client-maker.svg" alt="maker" class="client--img">
-        </div>
+        <a class="main--btn main--cta" href="#">Learn more</a>
       </div>
-      <div class="hero--img">
-        <img class="mobile--img hero--image" src="./images/image-hero-mobile.png" alt="">
-        <img class="desktop--img hero--image" src="./images/image-hero-mobile.png" alt="">
+      <div class="main--clients">
+        <img class="client--img" src="./images/client-databiz.svg" alt="databiz">
+        <img class="client--img" src="./images/client-audiophile.svg" alt="audiophile">
+        <img class="client--img" src="./images/client-meet.svg" alt="meet">
+        <img class="client--img" src="./images/client-maker.svg" alt="maker">
       </div>
-    </main>
-  </div>
+    </div>
+    <picture class="main--img">
+      <source media="(min-width:600px)" srcset="./images/image-hero-desktop.png">
+      <img src="./images/image-hero-mobile.png" alt="hero image">
+    </picture>
+  </main>
+
+
+
+
+
+
+
+  <script src="./js/app.js"></script>
 </body>
-<script src="./app.js"></script>
+
 </html>
